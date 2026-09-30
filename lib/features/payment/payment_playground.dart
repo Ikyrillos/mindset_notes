@@ -19,8 +19,6 @@ class PaymobPayment implements PaymentMethod {
 }
 
 class Checkout {
-   // i depended on concrete implmementation of payment method, which is not good
-
    // always depend on abstraction, not concrete implementation
   final PaymentMethod paymentMethod;
 
@@ -33,7 +31,7 @@ class Checkout {
 
 
 void main() async {
-  final visa = VisaPayment();
+  // final visa = VisaPayment();
   final paymob = PaymobPayment();
   
   final checkout = Checkout(paymob);
