@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 abstract interface class PaymentMethod {
   Future<void> pay(double amount);
 }
@@ -5,14 +7,14 @@ abstract interface class PaymentMethod {
 class VisaPayment implements PaymentMethod {
   @override
   Future<void> pay(double amount) async {
-    print('Visa: $amount');
+    log('Visa: $amount');
   }
 }
 
 class PaymobPayment implements PaymentMethod {
   @override
   Future<void> pay(double amount) async {
-    print('PayMob: $amount');
+    log('PayMob: $amount');
   }
 }
 
