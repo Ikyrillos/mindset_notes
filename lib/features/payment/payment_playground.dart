@@ -31,7 +31,7 @@ class Checkout {
 
 
 void main() async {
-  // final visa = VisaPayment();
+  final visa = VisaPayment();
   final paymob = PaymobPayment();
   
   final checkout = Checkout(paymob);
