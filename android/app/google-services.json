@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "467304955222",
+    "project_id": "mindest-notes",
+    "storage_bucket": "mindest-notes.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:467304955222:android:9eb255d80dcdd69e4b6af7",
+        "android_client_info": {
+          "package_name": "com.example.mindset_notes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "467304955222-eh6c03ope8ucc16in5crvunoq1i5m2iu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCK3KRmxMEuFRiX4cdMKPJDnkyV6zfQYdQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "467304955222-eh6c03ope8ucc16in5crvunoq1i5m2iu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "467304955222-2rtke2hfskthha7o86oorssevbnaid58.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.mindsetNotes"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
