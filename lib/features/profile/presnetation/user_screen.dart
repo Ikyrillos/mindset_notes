@@ -2,7 +2,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mindset_notes/core/routes/route_constants.dart';
-import 'package:mindset_notes/features/notes/cubit/notes_cubit.dart';
 import 'package:mindset_notes/features/profile/cubit/user_cubit.dart';
 import 'package:mindset_notes/features/profile/cubit/user_state.dart';
 
@@ -191,7 +190,6 @@ class _UserViewState extends State<_UserView> {
                         ? null
                         : () {
                             context.read<UserCubit>().logout();
-                            context.read<NotesCubit>().clear();
                             Navigator.pushReplacementNamed(
                               context,
                               RouteConstants.auth,

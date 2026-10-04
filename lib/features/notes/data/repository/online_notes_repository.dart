@@ -37,12 +37,13 @@ class OnlineNotesRepository implements NotesRepository {
   Future<List<FirebaseNote>> getAll() async {
     final user = FirebaseAuth.instance.currentUser;
     log('user?.uid ${user?.uid} ');
-    final res = (await db.collection(noteCollection).get()).docs
-        .where((element) => element['userId'] == user?.uid)
-        .map((e) {
-          final data = {...e.data(), 'id': e.id};
-          return data;
-        })
+    if (user == null) return [];
+    final res = (await db
+            .collection(noteCollection)
+            .where('userId', isEqualTo: user.uid)
+            .get())
+        .docs
+        .map((e) => {...e.data(), 'id': e.id})
         .toList();
 
     final firebaseNote = res.map((e) => FirebaseNote.fromJson(e)).toList();
